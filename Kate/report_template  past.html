@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ваш отчет о коммуникации</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f2f5;
+            color: #1C2745;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .compatibility {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .compatibility-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(#C525F1 0% 50%, #e0e0e0 50% 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .compatibility-circle h2 {
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #C525F1;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #6c757d;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #8F49EA;
+            display: flex;
+            align-items: center;
+        }
+
+        .section h2 span {
+            margin-right: 10px;
+        }
+
+        .section h2 .score {
+            margin-left: auto;
+            background: #e9f7ef;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #28a745;
+            font-size: 16px;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1C2745;
+        }
+
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .examples {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #8F49EA;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .examples p {
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .recommendation {
+            background: #e9f7ef;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .recommendation p {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            color: #fff;
+            background: linear-gradient(135deg, #B143F6, #8749EB);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #8749EB, #B143F6);
+        }
+
+        .icon {
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        /* Responsive */
+        @media (max-width: 767px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .section h2 {
+                font-size: 20px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Compatibility Circle -->
+            <div class="compatibility">
+                <div class="compatibility-circle">
+                    <h2>80%</h2>
+                </div>
+                <p>Ваша совместимость</p>
+            </div>
+            <h1>Ваш отчет о коммуникации</h1>
+            <p>На основе анализа переписки</p>
+        </div>
+
+        <p>Мы проанализировали вашу переписку, чтобы помочь вам лучше понять динамику вашего общения и предложить
+            рекомендации для укрепления отношений. Вот результаты нашего анализа:</p>
+
+        <!-- Section 1 -->
+        <div class="section">
+            <h2><span>1. Эмоциональная окраска переписки</span></h2>
+            <p>Ваша переписка насыщена позитивными эмоциями и поддержкой друг друга. Вы часто выражаете заботу и интерес
+                к
+                делам партнера.</p>
+
+            <h3>Примеры:</h3>
+            <div class="examples">
+                <p>[07/06/2024, 17:32:38] Вы: «Люблю тебя»</p>
+                <p>[07/06/2024, 17:33:50] Партнер: «Я тебя тоже очень люблю малыш»</p>
+                <p>[08/06/2024, 07:21:29] Вы: «Доброе прекрасное утро»</p>
+                <p>[08/06/2024, 07:17:20] Партнер: «Оооооо поздравляю»</p>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section">
+            <h2><span>2. Совместная работа и интересы</span></h2>
+            <p>Вы активно обсуждаете совместные проекты и планы, что говорит о хорошем взаимодействии и общих целях.</p>
+
+            <h3>Примеры:</h3>
+            <div class="examples">
+                <p>[07/06/2024, 16:18:29] Вы: «🔗Crypto exchange 🔗 ...»</p>
+                <p>[07/06/2024, 16:19:02] Вы: «Мне что-то не все пока нравится»</p>
+                <p>[07/06/2024, 17:06:29] Партнер: «Мы не новый проект»</p>
+                <p>[07/06/2024, 17:07:10] Партнер: «И решили выбрать Telegram как стремительно развивающуюся платформу»
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section">
+            <h2><span>3. Выражение чувств</span></h2>
+            <p>В переписке вы открыто выражаете свои чувства и желания быть вместе, что свидетельствует о глубокой
+                эмоциональной связи.</p>
+
+            <h3>Примеры:</h3>
+            <div class="examples">
+                <p>[07/06/2024, 17:30:22] Партнер: «Хочу тебя рядом»</p>
+                <p>[07/06/2024, 17:31:05] Вы: «Я тоже хочу»</p>
+                <p>[07/06/2024, 17:31:15] Вы: «Очень сильно…»</p>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section">
+            <h2><span>4. Поддержка и забота</span></h2>
+            <p>Вы оказываете друг другу поддержку в важных моментах, таких как подготовка к экзаменам или работа над
+                проектами.</p>
+
+            <h3>Примеры:</h3>
+            <div class="examples">
+                <p>[07/06/2024, 17:05:15] Партнер: «Доброй ночи солнышко»</p>
+                <p>[07/06/2024, 17:55:43] Партнер: «Тебе удачи на экзамене все будет отлично»</p>
+                <p>[07/06/2024, 17:56:02] Партнер: «Ты у меня самая лучшая и любимая поэтому разъеби)»</p>
+            </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section">
+            <h2><span>5. Юмор и легкость в общении</span></h2>
+            <p>Ваша переписка наполнена шутками и легким юмором, что создает приятную атмосферу в общении.</p>
+
+            <h3>Примеры:</h3>
+            <div class="examples">
+                <p>[08/06/2024, 07:22:41] Вы: «Ахах»</p>
+                <p>[08/06/2024, 07:23:12] Вы: «Там как похороненный»</p>
+                <p>[08/06/2024, 10:02:41] Партнер: «Ахахах»</p>
+                <p>[08/06/2024, 10:02:44] Вы: «Ахах ага»</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Спасибо за использование нашего сервиса!</p>
+        </div>
+    </div>
+</body>
+
+</html>
