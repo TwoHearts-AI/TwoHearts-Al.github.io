@@ -208,6 +208,12 @@
     </div>
 
     <script>
+        // Handle image loading errors
+        function handleImageError(img) {
+            img.style.display = 'none';
+            img.parentElement.classList.add('no-image');
+        }
+
         // Function to load and display sample reports
         async function loadSamples() {
             const samplesContainer = document.getElementById('samples-container');
@@ -229,7 +235,7 @@
                     </div>
                     <h2>Анализ #${sample.id}</h2>
                     <p>Подробный анализ коммуникации с рекомендациями</p>
-                    <a href="/samples/analysis_${sample.id}.html" class="view-btn">Посмотреть анализ</a>
+                    <a href="samples/analysis_${sample.id}.html" class="view-btn">Посмотреть анализ</a>
                 `;
                 samplesContainer.appendChild(card);
             });
