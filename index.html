@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="""ru">
+
+</html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="""UTF-8">
     <title>Ваш отчет о коммуникации</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="""https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="""stylesheet" />
     <style>
         /* Reset */
         * {
@@ -220,6 +222,7 @@
 
             // List of sample files
             const samples = [
+                { id: 'paid_template', score: '88%', isPaid: true },
                 { id: '21', score: '85%' },
                 { id: '22', score: '80%' },
                 { id: '23', score: '75%' },
@@ -229,14 +232,27 @@
             samples.forEach(sample => {
                 const card = document.createElement('div');
                 card.className = 'sample-card';
-                card.innerHTML = `
-                    <div class="compatibility-circle" style="background: conic-gradient(#8F49EA 0% ${parseInt(sample.score)}%, #e0e0e0 ${parseInt(sample.score)}% 100%);">
-                        <h2 style="color: #fff; font-size: 24px;">${sample.score}</h2>
-                    </div>
-                    <h2>Анализ #${sample.id}</h2>
-                    <p>Подробный анализ коммуникации с рекомендациями</p>
-                    <a href="samples/analysis_${sample.id}.html" class="view-btn">Посмотреть анализ</a>
-                `;
+
+                if (sample.isPaid) {
+                    card.innerHTML = `
+                        <div class="compatibility-circle" style="background: conic-gradient(gold 0% ${parseInt(sample.score)}, #e0e0e0 ${parseInt(sample.score)}% 100%);">
+                            <h2 style="color: gold; font-size: 24px;">${sample.score}</h2>
+                        </div>
+                        <h2>💎 Платная версия</h2>
+                        <p>Подробный анализ коммуникации с рекомендациями</p>
+                        <a href="samples/paid_template.html" class="view-btn">Посмотреть платный анализ</a>
+                    `;
+                } else {
+                    card.innerHTML = `
+                        <div class="compatibility-circle" style="background: conic-gradient(#8F49EA 0% ${parseInt(sample.score)}, #e0e0e0 ${parseInt(sample.score)}% 100%);">
+                            <h2 style="color: #fff; font-size: 24px;">${sample.score}</h2>
+                        </div>
+                        <h2>Анализ #${sample.id}</h2>
+                        <p>Подробный анализ коммуникации с рекомендациями</p>
+                        <a href="samples/analysis_${sample.id}.html" class="view-btn">Посмотреть анализ</a>
+                    `;
+                }
+
                 samplesContainer.appendChild(card);
             });
         }
