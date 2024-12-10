@@ -4,7 +4,8 @@
 </html>
 
 <head>
-    <meta charset="""UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ваш отчет о коммуникации</title>
     <link href="""https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="""stylesheet" />
     <style>
@@ -19,13 +20,15 @@
             font-family: 'Poppins', sans-serif;
             background: #f0f2f5;
             color: #1C2745;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 90%;
             margin: 30px auto;
+            padding: 2rem;
             background: #fff;
-            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
@@ -159,16 +162,30 @@
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.3s;
         }
 
         .btn:hover {
             background: linear-gradient(135deg, #8749EB, #B143F6);
+            transform: scale(1.05);
         }
 
         .icon {
             margin-right: 8px;
             vertical-align: middle;
+        }
+
+        #samples-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .sample-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
         }
 
         /* Responsive */
@@ -240,7 +257,7 @@
                             <h2 style="color: gold; font-size: 24px;">${sample.score}</h2>
                         </div>
                         <h2>💎 Платная версия</h2>
-                        <p>Подробный анализ коммуникации с рекомендациями</p>
+                        <p>Подробный анализ коммуникации c рекомендациями</p>
                         <a href="samples/paid_template.html" class="view-btn">Посмотреть платный анализ</a>
                     `;
                 } else {
