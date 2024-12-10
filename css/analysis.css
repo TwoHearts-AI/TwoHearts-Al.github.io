@@ -1,0 +1,223 @@
+/* css/analysis_21.css */
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f0f2f5;
+    color: #1c2745;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.compatibility {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.compatibility-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#8f49ea 0% 85%, #e0e0e0 85% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    transition: background 0.5s;
+}
+
+.compatibility-circle h2 {
+    font-size: 36px;
+    color: #8f49ea; /* Improved text color */
+    position: absolute;
+    z-index: 2;
+}
+
+.compatibility-circle::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background: #ffffff;
+    z-index: 1; /* Ensure this is below the h2 element */
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #8f49ea;
+}
+
+.header p {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #8f49ea;
+    display: flex;
+    align-items: center;
+}
+
+.section h2 span {
+    margin-right: 10px;
+}
+
+.section h2 .score {
+    margin-left: auto;
+    background: #e9f7ef;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #28a745;
+    font-size: 16px;
+}
+
+.section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1c2745;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.examples {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #8f49ea;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.examples p {
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.recommendation {
+    background: #e9f7ef;
+    padding: 15px;
+    border-left: 4px solid #28a745;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.recommendation p {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(135deg, #b143f6, #8749eb);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #8749eb, #b143f6);
+}
+
+.icon {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Graph Styles */
+.graph {
+    margin-bottom: 30px;
+}
+
+.graph img {
+    max-width: 100%;
+    height: auto;
+}
+
+.no-resource {
+    display: none;
+}
+
+.fallback-content {
+    display: none;
+}
+
+.no-resource + .fallback-content {
+    display: block;
+    color: #000; /* Replace with your desired color */
+}

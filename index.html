@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TwoHearts_AI – Улучшите Ваши Отношения с Искусственным Интеллектом</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-kFU5oTqKNtf3wXqRoeJDw8eUd6n2gH8B+9w6d1XVZ6BZVgppv0jHlHSZz4nGHw+FgLxWJYpS5+z5iWj1u1BGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Reset */
         * {
@@ -196,8 +201,9 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .feature-card img {
-            width: 60px;
+        .feature-card i {
+            font-size: 60px;
+            color: #8F49EA;
             margin-bottom: 20px;
         }
 
@@ -310,6 +316,7 @@
             justify-content: center;
             margin: 0 auto 20px auto;
             position: relative;
+            transition: background 0.5s;
         }
 
         .compatibility-circle h2 {
@@ -429,10 +436,6 @@
             .steps {
                 flex-direction: column;
             }
-
-            .testimonial-slider {
-                justify-content: center;
-            }
         }
 
         @media (max-width: 767px) {
@@ -503,24 +506,24 @@
             <h2>Почему Выбирают TwoHearts_AI?</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <img src="imgs/icon_science.png" alt="Научный Подход" />
+                    <i class="fas fa-flask"></i>
                     <h3>Научный Подход</h3>
                     <p>Разработано профессиональными психологами с использованием проверенных методик анализа личности.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <img src="imgs/icon_security.png" alt="Конфиденциальность" />
+                    <i class="fas fa-shield-alt"></i>
                     <h3>Конфиденциальность</h3>
                     <p>Вся обработка данных происходит локально, обеспечивая полную защиту вашей личной информации.</p>
                 </div>
                 <div class="feature-card">
-                    <img src="imgs/icon_technology.png" alt="Технологическое Превосходство" />
+                    <i class="fas fa-robot"></i>
                     <h3>Технологическое Превосходство</h3>
                     <p>Используем передовые технологии искусственного интеллекта для точного анализа ваших отношений.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <img src="imgs/icon_easy.png" alt="Простота Использования" />
+                    <i class="fas fa-mobile-alt"></i>
                     <h3>Простота Использования</h3>
                     <p>Легкая интеграция с Telegram и другими мессенджерами делает использование приложения удобным для
                         всех.</p>
@@ -622,12 +625,6 @@
             });
         });
 
-        // Handle image loading errors
-        function handleImageError(img) {
-            img.style.display = 'none';
-            img.parentElement.classList.add('no-image');
-        }
-
         // Function to load and display sample reports
         async function loadSamples() {
             const samplesContainer = document.getElementById('samples-container');
@@ -666,12 +663,6 @@
                         <a href="${link}" class="view-btn" aria-label="Посмотреть анализ">Посмотреть анализ</a>
                     `;
                 }
-
-                // Handle image loading errors
-                const imgs = card.querySelectorAll('img');
-                imgs.forEach(img => {
-                    img.onerror = () => handleImageError(img);
-                });
 
                 samplesContainer.appendChild(card);
             });
