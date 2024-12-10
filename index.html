@@ -223,6 +223,7 @@
             // List of sample files
             const samples = [
                 { id: 'paid_template', score: '88%', isPaid: true },
+                { id: '20', score: '50%' },
                 { id: '21', score: '85%' },
                 { id: '22', score: '80%' },
                 { id: '23', score: '75%' },
@@ -243,13 +244,14 @@
                         <a href="samples/paid_template.html" class="view-btn">Посмотреть платный анализ</a>
                     `;
                 } else {
+                    const link = sample.link ? sample.link : `samples/analysis_${sample.id}.html`;
                     card.innerHTML = `
-                        <div class="compatibility-circle" style="background: conic-gradient(#8F49EA 0% ${parseInt(sample.score)}, #e0e0e0 ${parseInt(sample.score)}% 100%);">
+                        <div class="compatibility-circle" style="background: conic-gradient(#8F49EA 0% ${parseInt(sample.score)}%, #e0e0e0 ${parseInt(sample.score)}% 100%);">
                             <h2 style="color: #fff; font-size: 24px;">${sample.score}</h2>
                         </div>
                         <h2>Анализ #${sample.id}</h2>
                         <p>Подробный анализ коммуникации с рекомендациями</p>
-                        <a href="samples/analysis_${sample.id}.html" class="view-btn">Посмотреть анализ</a>
+                        <a href="${link}" class="view-btn">Посмотреть анализ</a>
                     `;
                 }
 
